@@ -1,29 +1,30 @@
 <html>
 
+<head>
+  <style>
+    .icon {
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</head>
+
 <body>
-  <svg width="300" height="300">
-    <defs>
-      <linearGradient id="linearGradient" x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0%" stop-color="red"></stop>
-        <stop offset="100%" stop-color="green"></stop>
-      </linearGradient>
-      <radialGradient id="radialGradient" cx="0.5" cy="0.1" r="0.5" fx="0.1" fy="0.1">
-        <stop offset="0%" stop-color="red"></stop>
-        <stop offset="100%" stop-color="green"></stop>
-      </radialGradient>
-
-
-      <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
-        <stop offset="0%" stop-color="red" />
-        <stop offset="100%" stop-color="blue" />
-      </radialGradient>
-
-    </defs>
-    <rect x="0" y="0" width="100" height="100" fill="url(#linearGradient)" />
-    <rect x="100" y="100" width="100" height="100" fill="url(#radialGradient)" />
-
+  <svg class="icon">
+    <use xlink:href="sprites.svg#icon_line" fill="blue"></use>
   </svg>
-
+  <svg class="icon">
+    <use xlink:href="sprites.svg#icon_facebook" fill="blue"></use>
+  </svg>
+  <svg class="icon">
+    <use xlink:href="sprites.svg#icon_google" fill="red"></use>
+  </svg>
+  <svg class="icon">
+    <use xlink:href="sprites.svg#icon_twitter" fill="red"></use>
+  </svg>
+  <svg class="icon">
+    <use xlink:href="sprites.svg#icon_linkedin" fill="red"></use>
+  </svg>
 </body>
 
 </html>
