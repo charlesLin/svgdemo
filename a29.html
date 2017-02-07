@@ -1,29 +1,39 @@
 <html>
 
+<head>
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/velocity-animate/velocity.js"></script>
+  <style>
+    svg {
+      border: solid 1px red;
+      display: inline-block
+    }
+  </style>
+</head>
+
 <body>
-  <svg width="300" height="300">
-    <defs>
-      <linearGradient id="linearGradient" x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0%" stop-color="red"></stop>
-        <stop offset="100%" stop-color="green"></stop>
-      </linearGradient>
-      <radialGradient id="radialGradient" cx="0.5" cy="0.1" r="0.5" fx="0.1" fy="0.1">
-        <stop offset="0%" stop-color="red"></stop>
-        <stop offset="100%" stop-color="green"></stop>
-      </radialGradient>
-
-
-      <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
-        <stop offset="0%" stop-color="red" />
-        <stop offset="100%" stop-color="blue" />
-      </radialGradient>
-
-    </defs>
-    <rect x="0" y="0" width="100" height="100" fill="url(#linearGradient)" />
-    <rect x="100" y="100" width="100" height="100" fill="url(#radialGradient)" />
-
+  <h1>svg animation 2</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500">
+    <g id="logo">
+      <rect id="rect1" x="-500" y="0" width="400" height="400" fill="red">
+        <animate attributeName="x" from="-500" to="0" dur="0.4s" fill="freeze" />
+      </rect>
+      <rect id="rect2" x="50" y="500" width="300" height="300" fill="white">
+      </rect>
+      <animate attributeName="y" to="50" dur="0.4s" xlink:href="#rect2" fill="freeze" />
+      <rect class="rect3" x="500" y="100" width="200" height="200" fill="red">
+        <animate attributeName="x" to="100" dur="0.4s" fill="freeze" />
+      </rect>
+      <circle class="circle" cx="800" cy="800" r="100" fill="green">
+        <animate attributeName="cx" to="200" dur="0.4s" fill="freeze" />
+        <animate attributeName="cy" to="200" dur="0.4s" fill="freeze" />
+      </circle>
+      <text visibility="hidden" class="text" x="125" y="250" font-size="1" fill="gold">金
+        <animate attributeName="font-size" to="150" dur="0.4s" fill="freeze" />
+        <set attributeName="visibility" to="visible" dur="0.4s" fill="freeze" />
+      </text>
+    </g>
   </svg>
-
 </body>
 
 </html>
