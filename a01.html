@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    #logo {
+      height: 800px;
+      width: 800px;
+      background: url("bankpro.svg");
+      background-repeat: no-repeat;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>SVG</h1>
+  <svg width="200" height="200" >
+    <circle cx="100" cy="100" r="100" fill="red" />
+    <text x="80" y="100" fill="black">BankPro</text>
+  </svg>
+  <h1>object</h1><h1>
+  <object data="bankpro.svg" type="image/svg+xml">
+    <img src="http://img.ltn.com.tw/Upload/ent/page/800/2016/07/19/phpgbHYth.png" />
+  </object>
+  <h1>img</h1>
+  <img src="bankpro.svg" alt="svg" width="200" heigth="200">
+  <h1>embed</h1>
+  <embed src="bankpro.svg" type="image/svg+xml" />
+  <h1>iframe</h1>
+  <iframe src="bankpro.svg" type="image/svg+xml" style="width:300;height: 300;border: none"></iframe>
+  <h1>css</h1>
+  <div id="logo" />
+</body>
+
+</html>

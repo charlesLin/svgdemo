@@ -1,0 +1,19 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <h1>use 屬性無法override</h1>
+  <svg width="1300" height="1300" style="border: solid 1px red;">
+    <defs>
+       <circle id="circle" cx="100" cy="100" r="50"
+        stroke="green" stroke-width="10"></circle>
+    </defs>
+    <use xlink:href="#circle" x="0" y="0" stroke-width="20"></use>
+    <use xlink:href="#circle" x="100" y="100" r="30" fill="blue" ></use>
+    <use xlink:href="#circle" x="200" y="100" fill="red" stroke="cyan"></use>
+  </svg>
+</body>
+
+</html>

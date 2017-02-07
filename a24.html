@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <style>
+    svg {
+      border: solid 1px red;
+      display: inline-block
+    }
+
+    #logo {
+      animation: spin 4s infinite linear;
+      transform-origin: center center;
+    }
+
+    #logo .rect {
+      fill: blue;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg) translate(0, 0)
+      }
+      100% {
+        transform: rotate(360deg) translate(100px, 100px)
+      }
+    }
+
+    #logo .text {
+      fill: lightgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>svg + css animation</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500">
+    <g id="logo" transform="translate(100, 100)">
+      <rect class="rect" x="0" y="0" width="400" height="400" fill="red" />
+      <rect x="50" y="50" width="300" height="300" fill="white" />
+      <rect class="rect" x="100" y="100" width="200" height="200" fill="red" />
+      <circle cx="200" cy="200" r="100" fill="green"></circle>
+      <text class="text" x="125" y="250" font-size="150" fill="gold">金</text>
+    </g>
+  </svg>
+
+
+</body>
+
+</html>

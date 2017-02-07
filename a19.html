@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <style>
+    svg {
+      border: solid 1px red;
+      display: inline-block
+    }
+  </style>
+</head>
+
+<body>
+  <h1>transform</h1>
+  <svg style="display: none;">
+    <symbol id="demo">
+      <g>
+        <rect x="0" y="0" width="400" height="400" fill="red" />
+        <rect x="50" y="50" width="300" height="300" fill="white" />
+        <rect x="100" y="100" width="200" height="200" fill="red" />
+        <circle cx="200" cy="200" r="100" fill="green"></circle>
+        <text x="125" y="250" font-size="150" fill="gold">淦</text>
+      </g>
+    </symbol>
+    <use xlink:href="#demo" />
+  </svg>
+  <h1>orig</h1>
+  <svg width="400" height="400">
+    <use xlink:href="#demo" />
+  </svg>
+  <h1>translate 平移：translate(400, 0)</h1>
+  <svg width="800" height="400">
+    <use xlink:href="#demo" transform="translate(400, 0)" />
+  </svg>
+  <h1>scale 縮放: scale(1.5, 0.5)</h1>
+  <svg width="800" height="400">
+    <use xlink:href="#demo" transform="scale(1.5, 0.5)" />
+  </svg>
+  <h1>x軸扭曲: skewX(45)</h1>
+  <svg width="800" height="400">
+    <use xlink:href="#demo" transform="skewX(45)" />
+  </svg>
+  <h1>y軸扭曲: skewY(45)</h1>
+  <svg width="400" height="800">
+    <use xlink:href="#demo" transform="skewY(45)" />
+  </svg>
+  <h1>綜合口味: translate(100, 100) scale(0.5 0.25) skewX(30) skewY(30)</h1>
+   <svg width="600" height="400">
+    <use xlink:href="#demo" transform="translate(100, 100) scale(0.5 0.25) skewX(30) skewY(30)" />
+  </svg>
+</body>
+
+</html>

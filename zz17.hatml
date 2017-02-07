@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <style>
+    .box {
+      height: 350;
+      width: 300;
+      display: inline-block;
+
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <svg width="1000" height="800">
+    <symbol id="demo">
+      <rect x="0" width="100" y="0" height="100" stroke="blue" />
+    </symbol>
+
+    <use xlink:href="#demo" fill="white" x="0" y="0"></use>
+    <use xlink:href="#demo" fill="green" x="200" y="200" stroke="lightred"></use>
+  </svg>
+
+
+
+
+</body>
+
+</html>

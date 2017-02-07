@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <style>
+    svg {
+      border: solid 1px red;
+      display: inline-block
+    }
+
+    #logo1 .rect {
+      fill: blue;
+    }
+
+    #logo1 .text {
+      fill: lightgreen;
+    }
+
+    #logo2 .rect {
+      fill: purple;
+    }
+
+    #logo2 .text {
+      fill: lightpink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>css + svg group</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="500">
+    <g id="logo1">
+      <rect class="rect" x="0" y="0" width="400" height="400" fill="red" />
+      <rect x="50" y="50" width="300" height="300" fill="white" />
+      <rect class="rect" x="100" y="100" width="200" height="200" fill="red" />
+      <circle cx="200" cy="200" r="100" fill="green"></circle>
+      <text class="text" x="125" y="250" font-size="150" fill="gold">金</text>
+    </g>
+    <g id="logo2" transform="translate(500 0)">
+      <rect class="rect" x="0" y="0" width="400" height="400" fill="red" />
+      <rect x="50" y="50" width="300" height="300" fill="white" />
+      <rect class="rect" x="100" y="100" width="200" height="200" fill="red" />
+      <circle cx="200" cy="200" r="100" fill="green"></circle>
+      <text class="text" x="125" y="250" font-size="150" fill="gold">金</text>
+    </g>
+  </svg>
+
+
+</body>
+
+</html>
