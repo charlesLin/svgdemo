@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/velocity-animate/velocity.js"></script>
+  <style>
+    svg {
+      border: solid 1px red;
+      display: inline-block
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>svg + css animation with js 2</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500">
+    <g id="logo">
+      <rect class="rect1" x="-500" y="0" width="400" height="400" fill="red" />
+      <rect class="rect2" x="50" y="500" width="300" height="300" fill="white" />
+      <rect class="rect3" x="500" y="100" width="200" height="200" fill="red" />
+      <circle class="circle" cx="800" cy="800" r="100" fill="green"></circle>
+      <text style="display:none" class="text" x="125" y="250" font-size="1" fill="gold">金</text>
+    </g>
+  </svg>
+   <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500">
+    <g id="logo">
+      <rect class="rect1" x="0" y="0" width="400" height="400" fill="red" />
+      <rect class="rect2" x="50" y="50" width="300" height="300" fill="white" />
+      <rect class="rect3" x="100" y="100" width="200" height="200" fill="red" />
+      <circle class="circle" cx="200" cy="200" r="100" fill="green"></circle>
+      <text class="text" x="125" y="250" font-size="150" fill="gold">金</text>
+    </g>
+  </svg>-->
+<script>
+  $('.rect1').velocity({x : 0})
+  $('.rect2').delay(500).velocity({y : 50});
+  $('.rect3').delay(500).velocity({x : 100});
+  $('.circle').delay(700).velocity({cx : 200, cy:200});
+  $('.text').show().delay(800).velocity({fontSize: 150});
+</script>
+
+</body>
+
+</html>
