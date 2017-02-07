@@ -20,7 +20,7 @@
       <rect class="rect2" x="50" y="500" width="300" height="300" fill="white" />
       <rect class="rect3" x="500" y="100" width="200" height="200" fill="red" />
       <circle class="circle" cx="800" cy="800" r="100" fill="green"></circle>
-      <text style="display:none" class="text" x="125" y="250" font-size="1" fill="gold">金</text>
+      <text style="display: none" class="text" x="125" y="250" font-size="1" fill="gold">金</text>
     </g>
   </svg>
    <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500">
@@ -37,7 +37,8 @@
   $('.rect2').delay(500).velocity({y : 50});
   $('.rect3').delay(500).velocity({x : 100});
   $('.circle').delay(700).velocity({cx : 200, cy:200});
-  $('.text').show().delay(800).velocity({fontSize: 150});
+  //$('.text').delay(8000).attr('visibility', 'visible').velocity({fontSize: 150});
+  $('.text').delay(800).velocity({fontSize: 150, visibility : 'visible'}, {display: "block"});
 </script>
 
 </body>
